@@ -18,7 +18,6 @@ function Navbar() {
       <div className="navbar-logo">Rehab</div>
       {isOpen && (
         <div className={`navbar-links ${isOpen ? "open" : ""}`}>
-         
           <Link to="/home" onClick={closeMenu}>
             Home
           </Link>
@@ -40,7 +39,6 @@ function Navbar() {
         </div>
       )}
       <div className={`navbar-links ${isOpen ? "open" : ""}`}>
-        
         <Link to="/home" onClick={closeMenu}>
           Home
         </Link>
@@ -58,6 +56,9 @@ function Navbar() {
         </Link>
         <Link to="/signin" className="logg" onClick={closeMenu}>
           Sign In
+        </Link>
+        <Link to="/generatevoucher" className="logg" onClick={closeMenu}>
+          Voucher
         </Link>
       </div>
       <div className="menu-icon" onClick={toggleMenu}>
