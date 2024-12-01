@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import "./Register.css";
 import Navbar from "./Navbar";
+
 function Register() {
   useEffect(() => {
     // Scroll to the top of the page
@@ -9,6 +10,7 @@ function Register() {
       behavior: "smooth",
     });
   }, []);
+
   return (
     <div>
       <Navbar />
@@ -23,36 +25,49 @@ function Register() {
         }}
       >
         <form className="form">
-          <p className="title">Register </p>
-          <p className="message">Signup now and get full access to our app. </p>
-          <div className="flex">
-            <label>
-              <input className="input" type="text" placeholder="" required="" />
-              <span>Firstname</span>
-            </label>
+          <p className="title">Patient Registration</p>
+          <p className="message">
+            Fill in the details to register the patient.
+          </p>
 
-            <label>
-              <input className="input" type="text" placeholder="" required="" />
-              <span>Lastname</span>
-            </label>
-          </div>
-
+          {/* Full Name */}
           <label>
-            <input className="input" type="email" placeholder="" required="" />
-            <span>Email</span>
+            <input className="input" type="text" placeholder="" required="" />
+            <span>Full Name</span>
           </label>
 
+          {/* Age */}
           <label>
-            <input className="input" type="password" placeholder="" required="" />
-            <span>Password</span>
+            <input className="input" type="number" placeholder="" required="" />
+            <span>Age</span>
           </label>
+
+          {/* Blood Group */}
           <label>
-            <input className="input" type="password" placeholder="" required="" />
-            <span>Confirm password</span>
+            <input className="input" type="text" placeholder="" required="" />
+            <span>Blood Group</span>
           </label>
+
+          {/* Guardian's Contact Number */}
+          <label>
+            <input className="input" type="tel" placeholder="" required="" />
+            <span>Guardian's Contact Number</span>
+          </label>
+
+          {/* Patient's Condition */}
+          <label>
+            <textarea
+              className="input"
+              rows="3"
+              placeholder=""
+              required=""
+            ></textarea>
+            <span>Condition</span>
+          </label>
+
           <button className="submit">Submit</button>
           <p className="signin">
-            Already have an acount ? <a href="#">Signin</a>{" "}
+            Already registered? <a href="#">View Records</a>
           </p>
         </form>
       </div>

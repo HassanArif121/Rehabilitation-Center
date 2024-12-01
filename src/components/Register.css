@@ -2,15 +2,15 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   width: 350px;
-  height: 480px;
   padding: 20px;
   border-radius: 20px;
   position: relative;
   background-color: #1a1a1a;
   color: #fff;
   border: 1px solid #333;
+
 }
 
 .title {
@@ -20,30 +20,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 30px;
   color: #00bfff;
-}
-
-.title::before {
-  width: 18px;
-  height: 18px;
-}
-
-.title::after {
-  width: 18px;
-  height: 18px;
-  animation: pulse 1s linear infinite;
-}
-
-.title::before,
-.title::after {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  left: 0px;
-  background-color: #00bfff;
 }
 
 .message,
@@ -64,12 +41,6 @@
   color: #00bfff;
 }
 
-.flex {
-  display: flex;
-  width: 100%;
-  gap: 6px;
-}
-
 .form label {
   position: relative;
 }
@@ -78,37 +49,38 @@
   background-color: #333;
   color: #fff;
   width: 100%;
-  padding: 20px 05px 05px 10px;
+  padding: 15px 10px;
   outline: 0;
   border: 1px solid rgba(105, 105, 105, 0.397);
   border-radius: 10px;
+  font-size: 15px;
 }
 
 .form label .input + span {
   color: rgba(255, 255, 255, 0.5);
   position: absolute;
   left: 10px;
-  top: 0px;
+  top: 10px;
   font-size: 0.9em;
   cursor: text;
   transition: 0.3s ease;
 }
 
 .form label .input:placeholder-shown + span {
-  top: 12.5px;
+  top: 20px;
   font-size: 0.9em;
 }
 
 .form label .input:focus + span,
 .form label .input:valid + span {
   color: #00bfff;
-  top: 0px;
-  font-size: 0.7em;
+  top: 5px;
+  font-size: 0.8em;
   font-weight: 600;
 }
 
-.input {
-  font-size: medium;
+textarea.input {
+  resize: none;
 }
 
 .submit {
@@ -118,7 +90,7 @@
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
-  transform: 0.3s ease;
+  transition: 0.3s ease;
   background-color: #00bfff;
 }
 
@@ -131,7 +103,6 @@
     transform: scale(0.9);
     opacity: 1;
   }
-
   to {
     transform: scale(1.8);
     opacity: 0;
